@@ -5,8 +5,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import PageOne from 'app/pages/page_one';
-import PageTwo from 'app/pages/page_two'
+import Home from 'app/pages/home';
+import RecipeDisplay from 'app/pages/recipe';
+import { getRecipe } from 'app/models/recipe';
 
 const App: React.FC = () => {
   const redirect = sessionStorage.redirect;
@@ -22,19 +23,14 @@ const App: React.FC = () => {
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link to="/page_two">Alternative Page</Link>
-        </li>
       </ul>
 
       <hr />
       <Switch>
         <Route exact path="/">
-          <PageOne />
+          <Home />
         </Route>
-        <Route path="/page_two">
-          <PageTwo />
-        </Route>
+        <Route path="/recipe/:recipeId" render={(props)=><RecipeDisplay recipe={getRecipe(props.match.params.recipeId)}/>} />
       </Switch>
     </div>
   </Router>

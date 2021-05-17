@@ -1,6 +1,6 @@
 {
-  "name": "hosted-react-app",
-  "homepage": "http://jm3ad.github.io/hosted-react-app",
+  "name": "cooking",
+  "homepage": "http://jm3ad.github.io/cooking",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
