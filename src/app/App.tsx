@@ -23,8 +23,6 @@ const App: React.FC = () => {
       <div className="nav-bar">
         <Link to="/">Home</Link>
       </div>
-
-      <hr />
       <Switch>
         <Route exact path="/">
           <Home />

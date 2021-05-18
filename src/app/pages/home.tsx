@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       <header className="App-header">
         {
           allRecipes.map((recipe) => {
-            return <Link key={recipe.name} to={`/recipe/${recipe.name}`}>{recipe.name}</Link>;
+            return <Link className="recipe-link" key={recipe.name} to={`/recipe/${recipe.name}`}>{recipe.name}</Link>;
           })
         }
       </header>

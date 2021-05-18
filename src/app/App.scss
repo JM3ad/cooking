@@ -2,4 +2,12 @@
 
 .nav-bar{
     background-color: $backgroundColor;
+    min-height: 45px;
+    display: flex;
+    flex-direction: row;
+
+    a {
+        flex: 1;
+        margin: auto 3rem;
+    }
 }
