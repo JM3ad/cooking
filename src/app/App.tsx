@@ -8,6 +8,7 @@ import {
 import Home from 'app/pages/home';
 import RecipeDisplay from 'app/pages/recipe';
 import { getRecipe } from 'app/models/recipe';
+import 'app/App.scss';
 
 const App: React.FC = () => {
   const redirect = sessionStorage.redirect;
@@ -19,11 +20,9 @@ const App: React.FC = () => {
   return (
   <Router basename={process.env.REACT_APP_BASE_URL}>
     <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-      </ul>
+      <div className="nav-bar">
+        <Link to="/">Home</Link>
+      </div>
 
       <hr />
       <Switch>
