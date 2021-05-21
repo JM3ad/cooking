@@ -7,8 +7,10 @@ import {
 } from "react-router-dom";
 import Home from 'app/pages/home';
 import RecipeDisplay from 'app/pages/recipe';
-import { getRecipe } from 'app/models/recipe';
 import 'app/App.scss';
+import homeIcon from 'app/home.svg';
+import { getRecipe } from './services/recipe-service';
+import RecipeGenerator from './pages/recipe-generator';
 
 const App: React.FC = () => {
   const redirect = sessionStorage.redirect;
@@ -21,13 +23,21 @@ const App: React.FC = () => {
   <Router basename={process.env.REACT_APP_BASE_URL}>
     <div>
       <div className="nav-bar">
-        <Link to="/">Home</Link>
+        <Link to="/">
+          <img src={homeIcon} className="home-icon" alt="Home icon" />
+        </Link>
+        <Link to="/recipe-generator">
+          <img src={homeIcon} className="home-icon" alt="Home icon" />
+        </Link>
       </div>
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
         <Route path="/recipe/:recipeId" render={(props)=><RecipeDisplay recipe={getRecipe(props.match.params.recipeId)}/>} />
+        <Route path="/recipe-generator">
+          <RecipeGenerator />
+        </Route>
       </Switch>
     </div>
   </Router>
