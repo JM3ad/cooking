@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import 'app/pages/Pages.scss';
 import { Recipe } from 'app/models/recipe';
+import MultiLineInput from 'app/components/multi-line-input';
 
 const RecipeGenerator: React.FC = () => {
     const [recipeName, setRecipeName] = useState<string>("");
@@ -14,16 +15,6 @@ const RecipeGenerator: React.FC = () => {
     const updateUrl = (e: React.ChangeEvent<HTMLInputElement>) => {
         setUrl(e.target.value);
     };
-    const addIngredient = () => {
-        const newData = [...ingredients, ""]
-        setIngredients(newData);
-    };
-    const updateIngredient = (i: number, e: React.ChangeEvent<HTMLInputElement>) => {
-        const newIngredients = [...ingredients];
-        newIngredients[i] = e.target.value;
-        setIngredients(newIngredients);
-    };
-
     const generateJson = () => {
         const recipe: Recipe = {
             name: recipeName,
@@ -42,14 +33,8 @@ const RecipeGenerator: React.FC = () => {
         <input value={recipeName} onChange={updateRecipe}></input>
         <label>URL</label>
         <input value={url} onChange={updateUrl}></input>
-        <label>Ingredients</label>
-        {
-            ingredients.map((ingredient, i) => {
-                return <input key={i} value={ingredient} onChange={(e) => updateIngredient(i, e)} />
-            })
-        }
-        <button onClick={addIngredient}>+</button>
-        <label>Method</label>
+        <MultiLineInput label="Ingredients" state={ingredients} setState={setIngredients}/>
+        <MultiLineInput label="Method" state={steps} setState={setSteps}/>
         <button onClick={generateJson}>Generate JSON</button>
         <div>
             {json}
