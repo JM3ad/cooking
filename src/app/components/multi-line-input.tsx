@@ -17,13 +17,20 @@ const MultiLineInput: React.FC<MultiLineInputProps> = (props: MultiLineInputProp
         newState[lineIndex] = e.target.value;
         setState(newState);
     };
+    const deleteLine = (lineIndex: number) => {
+        state.splice(lineIndex, 1);
+        setState([...state]);
+    };
 
 
     return <>
         <label>{label}</label>
         {
             state.map((step, i) => {
-                return <input key={i} value={step} onChange={(e) => updateLine(i, e)} />
+                return <div key={i}>
+                    <input value={step} onChange={(e) => updateLine(i, e)} />
+                    <button onClick={() => deleteLine(i)}>delete</button>
+                </div>;
             })
         }
         <button onClick={addLine}>+</button>
