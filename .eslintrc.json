@@ -18,6 +18,7 @@
     },
     "rules": {
       "react/prop-types": ["off"],
-      "max-lines-per-function": ["error", 40]
+      "max-lines-per-function": ["error", 40],
+      "@typescript-eslint/no-empty-function": ["off", { "allow": ["arrowFunctions"] }]
     }
   }
