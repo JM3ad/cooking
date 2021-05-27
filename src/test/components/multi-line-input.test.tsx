@@ -33,8 +33,12 @@ describe('MultiLineInput component', () => {
     });
     
     test('renders one less input after delete button hit', () => {
-    });
-    
-    test('state is updated when input is used', () => {
+        const setStateSpy = jest.fn();
+        const inputs = ["1st", "2nd", "3rd"];
+        render(<MultiLineInput label={testLabel} state={inputs} setState={setStateSpy}/>);
+        const deleteOptions = screen.getAllByTestId("delete");
+        fireEvent.click(deleteOptions[1]);
+        expect(setStateSpy).toHaveBeenCalledTimes(1);
+        expect(setStateSpy).toHaveBeenCalledWith<string[][]>(["1st", "3rd"]);
     });
 });
