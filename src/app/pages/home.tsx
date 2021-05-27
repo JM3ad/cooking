@@ -1,18 +1,20 @@
 import React from 'react';
-import 'app/pages/Pages.css';
+import 'app/pages/Pages.scss';
 import { Link } from 'react-router-dom';
-import { allRecipes } from 'app/models/recipe';
+import { getAllRecipes } from 'app/services/recipe-service';
+
 
 const Home: React.FC = () => {
+  const allRecipes = getAllRecipes();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        {
-          allRecipes.map((recipe) => {
-            return <Link key={recipe.name} to={`/recipe/${recipe.name}`}>{recipe.name}</Link>;
-          })
-        }
-      </header>
+    <div className="app-page">
+      <h1>Recipes</h1>
+      {
+        allRecipes.map((recipe) => {
+          return <Link className="recipe-link" key={recipe.name} to={`/recipe/${recipe.name}`}>{recipe.name}</Link>;
+        })
+      }
     </div>
   );
 }
