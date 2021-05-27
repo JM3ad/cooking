@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/cooking/static/css/main.89f33d06.chunk.css",
-    "main.js": "/cooking/static/js/main.953d050f.chunk.js",
-    "main.js.map": "/cooking/static/js/main.953d050f.chunk.js.map",
+    "main.css": "/cooking/static/css/main.403c11ad.chunk.css",
+    "main.js": "/cooking/static/js/main.d4d47215.chunk.js",
+    "main.js.map": "/cooking/static/js/main.d4d47215.chunk.js.map",
     "runtime-main.js": "/cooking/static/js/runtime-main.6a66a0dc.js",
     "runtime-main.js.map": "/cooking/static/js/runtime-main.6a66a0dc.js.map",
     "static/js/2.659a3dad.chunk.js": "/cooking/static/js/2.659a3dad.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.0957c62a.chunk.js": "/cooking/static/js/3.0957c62a.chunk.js",
     "static/js/3.0957c62a.chunk.js.map": "/cooking/static/js/3.0957c62a.chunk.js.map",
     "index.html": "/cooking/index.html",
-    "static/css/main.89f33d06.chunk.css.map": "/cooking/static/css/main.89f33d06.chunk.css.map",
+    "static/css/main.403c11ad.chunk.css.map": "/cooking/static/css/main.403c11ad.chunk.css.map",
     "static/js/2.659a3dad.chunk.js.LICENSE.txt": "/cooking/static/js/2.659a3dad.chunk.js.LICENSE.txt",
     "static/media/edit-doc.7f53e506.svg": "/cooking/static/media/edit-doc.7f53e506.svg",
     "static/media/home.6660b146.svg": "/cooking/static/media/home.6660b146.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.6a66a0dc.js",
     "static/js/2.659a3dad.chunk.js",
-    "static/css/main.89f33d06.chunk.css",
-    "static/js/main.953d050f.chunk.js"
+    "static/css/main.403c11ad.chunk.css",
+    "static/js/main.d4d47215.chunk.js"
   ]
 }
