@@ -1,23 +1,23 @@
 @import "src/styles/vars";
 
 .app-page {
-  background-color: $backgroundColor;
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: $backgroundColor;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .recipe-link {
-  background-color: $secondaryColor;
-  text-align: center;
-  font-size: 1.5rem;
-  color: white;
-  border-radius: 1rem;
-  margin: 0.5rem;
-  padding: 1rem;
-  min-width: 10rem;
+    background-color: $secondaryColor;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    padding: 1rem;
+    min-width: 10rem;
 }
