@@ -5,7 +5,7 @@ export const getAllRecipes = (): Recipe[] => {
     return allRecipes;
 };
 
-export const getRecipe = (name: string): Recipe => {
+export const getRecipe = (name: string): Recipe | null => {
     const matchingRecipe = getAllRecipes().filter((recipe) =>
         recipe.name.toLowerCase() === name.toLowerCase()
     );
@@ -14,8 +14,5 @@ export const getRecipe = (name: string): Recipe => {
         return matchingRecipe[0];
     }
 
-    return {
-        name: "Test 2",
-        url: "http://google.com"
-    };
+    return null;
 };

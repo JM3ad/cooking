@@ -3,14 +3,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Home from 'app/pages/home';
 import RecipeDisplay from 'app/pages/recipe';
-import 'app/App.scss';
-import homeIcon from 'app/home.svg';
 import { getRecipe } from './services/recipe-service';
 import RecipeGenerator from './pages/recipe-generator';
+import PageNotFound from './pages/page-not-found';
+import NavBar from './components/nav-bar';
 
 const App: React.FC = () => {
   const redirect = sessionStorage.redirect;
@@ -22,21 +21,24 @@ const App: React.FC = () => {
   return (
   <Router basename={process.env.REACT_APP_BASE_URL}>
     <div>
-      <div className="nav-bar">
-        <Link to="/">
-          <img src={homeIcon} className="home-icon" alt="Home icon" />
-        </Link>
-        <Link to="/recipe-generator">
-          <img src={homeIcon} className="home-icon" alt="Home icon" />
-        </Link>
-      </div>
+      <NavBar />
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/recipe/:recipeId" render={(props)=><RecipeDisplay recipe={getRecipe(props.match.params.recipeId)}/>} />
+        <Route path="/recipe/:recipeId" render={(props)=>{
+          const recipe = getRecipe(props.match.params.recipeId);
+          if (!recipe) {
+            return <PageNotFound />;
+          }
+
+          return <RecipeDisplay recipe={recipe}/>}
+        } />
         <Route path="/recipe-generator">
           <RecipeGenerator />
+        </Route>
+        <Route>
+          <PageNotFound />
         </Route>
       </Switch>
     </div>

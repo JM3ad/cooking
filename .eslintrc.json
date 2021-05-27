@@ -18,7 +18,8 @@
     },
     "rules": {
       "react/prop-types": ["off"],
-      "max-lines-per-function": ["error", 40],
-      "@typescript-eslint/no-empty-function": ["off", { "allow": ["arrowFunctions"] }]
+      "max-lines-per-function": ["error", 60],
+      "@typescript-eslint/no-empty-function": ["off", { "allow": ["arrowFunctions"] }],
+      "react/no-unescaped-entities": ["error", {"forbid": ["<", ">", "{", "}"]}]
     }
   }
