@@ -12,6 +12,10 @@
     color: white;
 }
 
+.recipe {
+    margin: 2rem;
+}
+
 .recipe-link {
     @include button;
 }

@@ -1,27 +1,8 @@
 import { Recipe } from "app/models/recipe";
 
+/* eslint-disable max-len */
+
 export const allRecipes: Recipe[] = [
-    {
-        name: "Bibimbap",
-        url: "https://www.lazycatkitchen.com/vegan-bibimbap/",
-        ingredients: ["1 egg", "2 onions"],
-        method: ["Fry egg", "Fry onion"]
-    },
-    {
-        name: "Daal",
-        url: "https://www.google.com"
-    },
-    {
-        name: "Chilli",
-        url: "https://www.facebook.com"
-    },
-    {
-        name: "Mac & Greens",
-        url: "https://google.com"
-    },
-    {
-        name: "Another",
-        url: "https://example.com"
-    },
-    {"name":"Title","url":"google"}
+    {"name":"Katsu Curry Sauce","url":"http://allrecipes.co.uk/recipe/29578/chicken-katsu-curry.aspx","ingredients":["3 onions","7 garlic cloves","3 carrots","3 tbsp plain flour","2 tbsp curry powder","900ml veg stock","1 tbsp honey","2 tbsp soy sauce","1 bay leaf","1 tsp garam masala"],"method":["Fry the onions and garlic until soft","Add carrots and cook until soft (approx 10 mins)","Add flour and curry powder, cook for 1 minute","Add stock gradually, then add honey, soy sauce and bay leaf","Bring to the boil, then reduce to a simmer until sauce is thick but can be poured - around 20 mins","Stir in garam masala. Serve with breaded vegetables or tofu & rice"]},
+    {"name":"Chilli","url":"https://www.bbcgoodfood.com/recipes/burnt-aubergine-veggie-chilli","ingredients":["3 aubergines","1 red onion, diced","2 carrots, diced","70g green lentils","30g red lentils","2 400g can kidney beans","400g can chopped tomatoes","3 tbsp soy sauce","20g dark chocolate, finely chopped","1 tsp chilli powder","2 tsp dried oregano","2 tsp ground cumin","2 tsp paprika","1 tsp ground coriander","1 tsp garam masala","400ml veg stock - double concentration","half a lime, juiced"],"method":["Grill or roast the aubergine in small chunks","Fry onion & carrot with salt in large pan for 15-20 mins until softened","Add the aubergine, lentils, beans (including liquid), tomatoes, soy sauce, chocolate, spices and herbs","Stir and pour in the stock","Bring to the boil then turn down heat low","Cover with a lid and simmer for 1.5 hours, stirring occasionally","Remove lid and let simmer for 15 mins","Add lime juice, and serve over rice or roasted sweet potato"]}
 ];

@@ -28,7 +28,13 @@ const MultiLineInput: React.FC<MultiLineInputProps> = (props: MultiLineInputProp
             state.map((step, i) => {
                 return <div key={i}>
                     <input value={step} onChange={(e) => updateLine(i, e)} />
-                    <button className="small-action-button" onClick={() => deleteLine(i)} data-testid="delete">-</button>
+                    <button
+                        className="small-action-button"
+                        onClick={() => deleteLine(i)}
+                        data-testid="delete"
+                    >
+                        -
+                    </button>
                 </div>;
             })
         }

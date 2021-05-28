@@ -12,7 +12,13 @@ const Home: React.FC = () => {
             <h1>Recipes</h1>
             {
                 allRecipes.map((recipe) => {
-                    return <Link className="recipe-link" key={recipe.name} to={`/recipe/${recipe.name}`}>{recipe.name}</Link>;
+                    return <Link
+                        className="recipe-link"
+                        key={recipe.name}
+                        to={`/recipe/${recipe.name}`}
+                    >
+                        {recipe.name}
+                    </Link>;
                 })
             }
         </div>

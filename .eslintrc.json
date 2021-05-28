@@ -21,6 +21,7 @@
       "max-lines-per-function": ["error", 60],
       "@typescript-eslint/no-empty-function": ["off", { "allow": ["arrowFunctions"] }],
       "react/no-unescaped-entities": ["error", {"forbid": ["<", ">", "{", "}"]}],
-      "indent": ["error", 4]
+      "indent": ["error", 4],
+      "max-len": ["error", { "code": 100 }]
     }
   }
