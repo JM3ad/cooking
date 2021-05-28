@@ -12,6 +12,9 @@ const NavBar: React.FC = () => {
         <Link to="/recipe-generator">
             <img src={editIcon} className="icon" alt="Edit icon" />
         </Link>
+        <Link to="/useful-charts">
+            <div>Helpful charts</div>
+        </Link>
     </div>
 };
 
