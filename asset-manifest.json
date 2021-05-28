@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/cooking/static/css/main.730ec88d.chunk.css",
-    "main.js": "/cooking/static/js/main.1ef280cb.chunk.js",
-    "main.js.map": "/cooking/static/js/main.1ef280cb.chunk.js.map",
-    "runtime-main.js": "/cooking/static/js/runtime-main.3679a46a.js",
-    "runtime-main.js.map": "/cooking/static/js/runtime-main.3679a46a.js.map",
-    "static/js/2.659a3dad.chunk.js": "/cooking/static/js/2.659a3dad.chunk.js",
-    "static/js/2.659a3dad.chunk.js.map": "/cooking/static/js/2.659a3dad.chunk.js.map",
-    "static/js/3.75c581c1.chunk.js": "/cooking/static/js/3.75c581c1.chunk.js",
-    "static/js/3.75c581c1.chunk.js.map": "/cooking/static/js/3.75c581c1.chunk.js.map",
+    "main.css": "/cooking/static/css/main.f48e951e.chunk.css",
+    "main.js": "/cooking/static/js/main.5db9c138.chunk.js",
+    "main.js.map": "/cooking/static/js/main.5db9c138.chunk.js.map",
+    "runtime-main.js": "/cooking/static/js/runtime-main.d553e61f.js",
+    "runtime-main.js.map": "/cooking/static/js/runtime-main.d553e61f.js.map",
+    "static/js/2.39aa37e0.chunk.js": "/cooking/static/js/2.39aa37e0.chunk.js",
+    "static/js/2.39aa37e0.chunk.js.map": "/cooking/static/js/2.39aa37e0.chunk.js.map",
+    "static/js/3.8c533534.chunk.js": "/cooking/static/js/3.8c533534.chunk.js",
+    "static/js/3.8c533534.chunk.js.map": "/cooking/static/js/3.8c533534.chunk.js.map",
     "index.html": "/cooking/index.html",
-    "static/css/main.730ec88d.chunk.css.map": "/cooking/static/css/main.730ec88d.chunk.css.map",
-    "static/js/2.659a3dad.chunk.js.LICENSE.txt": "/cooking/static/js/2.659a3dad.chunk.js.LICENSE.txt",
+    "static/css/main.f48e951e.chunk.css.map": "/cooking/static/css/main.f48e951e.chunk.css.map",
+    "static/js/2.39aa37e0.chunk.js.LICENSE.txt": "/cooking/static/js/2.39aa37e0.chunk.js.LICENSE.txt",
     "static/media/edit-doc.7f53e506.svg": "/cooking/static/media/edit-doc.7f53e506.svg",
-    "static/media/home.6660b146.svg": "/cooking/static/media/home.6660b146.svg"
+    "static/media/home.6660b146.svg": "/cooking/static/media/home.6660b146.svg",
+    "static/media/thermometer.41308725.svg": "/cooking/static/media/thermometer.41308725.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3679a46a.js",
-    "static/js/2.659a3dad.chunk.js",
-    "static/css/main.730ec88d.chunk.css",
-    "static/js/main.1ef280cb.chunk.js"
+    "static/js/runtime-main.d553e61f.js",
+    "static/js/2.39aa37e0.chunk.js",
+    "static/css/main.f48e951e.chunk.css",
+    "static/js/main.5db9c138.chunk.js"
   ]
 }
