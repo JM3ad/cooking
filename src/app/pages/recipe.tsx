@@ -52,7 +52,7 @@ const RecipeDisplay: React.FC<RecipeProps> = (props: RecipeProps) => {
     return (
         <div className="app-page">
             <div className="recipe">
-                <a href={recipe.url} className="recipe-link">Based on {recipe.name} here</a>
+                <a href={recipe.url} className="recipe-link">Based on {recipe.name}</a>
                 <IngredientsDisplay ingredients={recipe.ingredients} />
                 <MethodDisplay method={recipe.method} />
             </div>
