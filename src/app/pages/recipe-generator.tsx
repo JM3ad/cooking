@@ -19,13 +19,16 @@ const RecipeGenerator: React.FC = () => {
         const recipe: Recipe = {
             name: recipeName,
             url: url,
-            ingredients: ingredients,
-            method: steps
+            ingredients: ingredients.filter((entry) => entry.trim().length > 0),
+            method: steps.filter((entry) => entry.trim().length > 0)
         };
-        setJson(JSON.stringify(recipe));
+        return JSON.stringify(recipe);
     };
+    const displayJson = () => {
+        setJson(generateJson());
+    }
     const copyToClipboard = () => {
-        navigator.clipboard.writeText(json);
+        navigator.clipboard.writeText(generateJson());
     };
 
     return <div className="app-page">
@@ -35,11 +38,13 @@ const RecipeGenerator: React.FC = () => {
         <input value={url} onChange={updateUrl}></input>
         <MultiLineInput label="Ingredients" state={ingredients} setState={setIngredients}/>
         <MultiLineInput label="Method" state={steps} setState={setSteps}/>
-        <button onClick={generateJson}>Generate JSON</button>
+        <div>
+            <button className="action-button" onClick={displayJson}>Display JSON</button>
+            <button className="action-button" onClick={copyToClipboard}>Copy to clipboard</button>
+        </div>
         <div>
             {json}
         </div>
-        <button onClick={copyToClipboard}>Copy to clipboard</button>
     </div>;
 };
 

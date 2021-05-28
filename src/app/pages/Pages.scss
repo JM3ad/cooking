@@ -1,4 +1,5 @@
 @import "src/styles/vars";
+@import "src/styles/common";
 
 .app-page {
     background-color: $backgroundColor;
@@ -12,12 +13,22 @@
 }
 
 .recipe-link {
-    background-color: $secondaryColor;
-    text-align: center;
-    font-size: 1.5rem;
-    color: white;
-    border-radius: 1rem;
-    margin: 0.5rem;
-    padding: 1rem;
-    min-width: 10rem;
+    @include button;
+}
+
+.action-button {
+    @include button;
+    font-size: 1rem;
+}
+
+.small-action-button {
+    @include button;
+    font-size: 1rem;
+    min-width: 1rem;
+    padding: 0.25rem 0.75rem;
+}
+
+input {
+    border-radius: 0.5rem;
+    min-width: 20rem;
 }
