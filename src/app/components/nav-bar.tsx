@@ -1,6 +1,7 @@
 import React from 'react';
 import homeIcon from 'icons/home.svg';
 import editIcon from 'icons/edit-doc.svg';
+import thermometerIcon from 'icons/thermometer.svg';
 import {Link} from 'react-router-dom';
 import 'app/components/nav-bar.scss';
 
@@ -13,7 +14,7 @@ const NavBar: React.FC = () => {
             <img src={editIcon} className="icon" alt="Edit icon" />
         </Link>
         <Link to="/useful-charts">
-            <div>Helpful charts</div>
+            <img src={thermometerIcon} className="icon" alt="Thermometer icon" />
         </Link>
     </div>
 };

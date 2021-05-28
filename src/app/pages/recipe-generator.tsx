@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import 'app/pages/Pages.scss';
 import { Recipe } from 'app/models/recipe';
 import MultiLineInput from 'app/components/multi-line-input';
 

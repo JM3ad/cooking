@@ -1,6 +1,5 @@
 import { Recipe } from 'app/models/recipe';
 import React from 'react';
-import 'app/pages/Pages.scss';
 import 'app/pages/Recipes.scss';
 
 type RecipeProps = {

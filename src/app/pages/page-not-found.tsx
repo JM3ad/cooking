@@ -1,5 +1,4 @@
 import React from 'react';
-import 'app/pages/Pages.scss';
 import { Link } from 'react-router-dom';
 
 
