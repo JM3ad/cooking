@@ -10,6 +10,8 @@ import { getRecipe } from './services/recipe-service';
 import RecipeGenerator from './pages/recipe-generator';
 import PageNotFound from './pages/page-not-found';
 import NavBar from './components/nav-bar';
+import UsefulCharts from './pages/useful-charts';
+import 'styles/Pages.scss';
 
 const App: React.FC = () => {
     const redirect = sessionStorage.redirect;
@@ -35,6 +37,9 @@ const App: React.FC = () => {
                 } />
                 <Route path="/recipe-generator">
                     <RecipeGenerator />
+                </Route>
+                <Route path="/useful-charts">
+                    <UsefulCharts />
                 </Route>
                 <Route>
                     <PageNotFound />
