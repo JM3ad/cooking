@@ -1,8 +1,12 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Recipe } from 'app/models/recipe';
 import MultiLineInput from 'app/components/multi-line-input';
 
-const RecipeGenerator: React.FC = () => {
+type RecipeProps = {
+    recipe: Recipe | null;
+};
+
+const RecipeGenerator: React.FC<RecipeProps> = (props: RecipeProps) => {
     const [recipeName, setRecipeName] = useState<string>("");
     const [url, setUrl] = useState<string>("");
     const [ingredients, setIngredients] = useState<string[]>([]);
@@ -29,6 +33,15 @@ const RecipeGenerator: React.FC = () => {
     const copyToClipboard = () => {
         navigator.clipboard.writeText(generateJson());
     };
+    useEffect(() => {
+        const recipe = props.recipe;
+        if (recipe) {
+            setRecipeName(recipe.name);
+            if (recipe.ingredients) setIngredients(recipe.ingredients);
+            if (recipe.url) setUrl(recipe.url);
+            if (recipe.method) setSteps(recipe.method);
+        }
+    }, [props]);
 
     return <div className="app-page">
         <label>Name</label>
