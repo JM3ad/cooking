@@ -1,6 +1,7 @@
 import { Recipe } from 'app/models/recipe';
 import React from 'react';
 import 'app/pages/Recipes.scss';
+import { Link } from 'react-router-dom';
 
 type RecipeProps = {
     recipe: Recipe;
@@ -48,11 +49,21 @@ const MethodDisplay: React.FC<MethodProps> = (props: {method?: string[]}) => {
 
 const RecipeDisplay: React.FC<RecipeProps> = (props: RecipeProps) => {
     const recipe = props.recipe;
+    const shouldShowEdit = process.env.REACT_APP_ENVIRONMENT === 'dev';
 
     return (
         <div className="app-page">
             <div className="recipe">
                 <h1 className="recipe-title">{recipe.name}</h1>
+                {shouldShowEdit
+                    ? <Link
+                        className="recipe-link"
+                        to={`/recipe-generator/${recipe.name}`}
+                    >
+                        Edit
+                    </Link>
+                    : null
+                }
                 <a href={recipe.url} className="recessive-link">Click for original recipe</a>
                 <IngredientsDisplay ingredients={recipe.ingredients} />
                 <MethodDisplay method={recipe.method} />
