@@ -1,21 +1,22 @@
 import React from 'react';
-import homeIcon from 'icons/home.svg';
-import editIcon from 'icons/edit-doc.svg';
-import thermometerIcon from 'icons/thermometer.svg';
 import {Link} from 'react-router-dom';
 import 'app/components/nav-bar.scss';
+import { NavBarLink } from 'app/models/nav-bar-link';
 
-const NavBar: React.FC = () => {
+export interface NavBarProps {
+    links: NavBarLink[];
+}
+
+const NavBar: React.FC<NavBarProps> = (props: NavBarProps) => {
+    const links = props.links;
     return <div className="nav-bar">
-        <Link to="/">
-            <img src={homeIcon} className="icon" alt="Home icon" />
-        </Link>
-        <Link to="/recipe-generator">
-            <img src={editIcon} className="icon" alt="Edit icon" />
-        </Link>
-        <Link to="/useful-charts">
-            <img src={thermometerIcon} className="icon" alt="Thermometer icon" />
-        </Link>
+        {
+            links.map((link) => {
+                return <Link key={link.pageRoute} to={link.pageRoute}>
+                    <img src={link.icon} className="icon" alt={link.altText} />
+                </Link>;
+            })
+        }
     </div>
 };
 
