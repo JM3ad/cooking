@@ -6,12 +6,13 @@ import {
 } from "react-router-dom";
 import Home from 'app/pages/home';
 import RecipeDisplay from 'app/pages/recipe';
-import { getRecipe } from './services/recipe-service';
-import RecipeGenerator from './pages/recipe-generator';
-import PageNotFound from './pages/page-not-found';
-import NavBar from './components/nav-bar';
-import UsefulCharts from './pages/useful-charts';
+import { getRecipe } from 'app/services/recipe-service';
+import RecipeGenerator from 'app/pages/recipe-generator';
+import PageNotFound from 'app/pages/page-not-found';
+import NavBar from 'app/components/nav-bar';
+import UsefulCharts from 'app/pages/useful-charts';
 import 'styles/Pages.scss';
+import { NavBarLinks } from 'app/data/nav-bar-links';
 
 const App: React.FC = () => {
     const redirect = sessionStorage.redirect;
@@ -22,7 +23,7 @@ const App: React.FC = () => {
 
     return (
         <Router basename={process.env.REACT_APP_BASE_URL}>
-            <NavBar />
+            <NavBar links={NavBarLinks}/>
             <Switch>
                 <Route exact path="/">
                     <Home />
