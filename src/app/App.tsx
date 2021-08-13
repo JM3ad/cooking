@@ -12,7 +12,7 @@ import PageNotFound from 'app/pages/page-not-found';
 import NavBar from 'app/components/nav-bar';
 import UsefulCharts from 'app/pages/useful-charts';
 import 'styles/Pages.scss';
-import { NavBarLinks } from 'app/models/nav-bar-link';
+import { NavBarLinks } from 'app/data/nav-bar-links';
 
 const App: React.FC = () => {
     const redirect = sessionStorage.redirect;

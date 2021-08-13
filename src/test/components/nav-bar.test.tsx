@@ -5,7 +5,7 @@ import homeIcon from 'icons/home.svg';
 import { NavBarLink } from 'app/models/nav-bar-link';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-describe('MultiLineInput component', () => {
+describe('NavBar component', () => {
     const aLink: NavBarLink = {
         pageRoute: '/fake-link',
         icon: homeIcon,
