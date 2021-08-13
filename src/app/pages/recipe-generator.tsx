@@ -44,10 +44,10 @@ const RecipeGenerator: React.FC<RecipeProps> = (props: RecipeProps) => {
     }, [props]);
 
     return <div className="app-page">
-        <label>Name</label>
-        <input value={recipeName} onChange={updateRecipe}></input>
-        <label>URL</label>
-        <input value={url} onChange={updateUrl}></input>
+        <label htmlFor="recipe-name">Name</label>
+        <input name="recipe-name" value={recipeName} onChange={updateRecipe}></input>
+        <label htmlFor="recipe-url">URL</label>
+        <input name="recipe-url" value={url} onChange={updateUrl}></input>
         <MultiLineInput label="Ingredients" state={ingredients} setState={setIngredients}/>
         <MultiLineInput label="Method" state={steps} setState={setSteps}/>
         <div>

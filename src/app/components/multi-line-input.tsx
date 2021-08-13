@@ -27,7 +27,12 @@ const MultiLineInput: React.FC<MultiLineInputProps> = (props: MultiLineInputProp
         {
             state.map((step, i) => {
                 return <div key={i}>
-                    <input value={step} onChange={(e) => updateLine(i, e)} autoFocus/>
+                    <input
+                        value={step}
+                        onChange={(e) => updateLine(i, e)}
+                        // eslint-disable-next-line
+                        autoFocus
+                    />
                     <button
                         className="small-action-button"
                         onClick={() => deleteLine(i)}
