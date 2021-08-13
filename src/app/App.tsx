@@ -36,8 +36,9 @@ const App: React.FC = () => {
 
                     return <RecipeDisplay recipe={recipe}/>}
                 } />
-                <Route path="/recipe-generator/:recipeId" render={(props)=>{
-                    const recipe = getRecipe(props.match.params.recipeId);
+                <Route path="/recipe-generator/:recipeId?" render={(props)=>{
+                    const recipeId = props.match.params.recipeId
+                    const recipe = recipeId ? getRecipe(recipeId) : null;
                     return <RecipeGenerator recipe={recipe}/>}
                 } />
                 <Route path="/useful-charts">
