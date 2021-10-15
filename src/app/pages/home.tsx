@@ -1,22 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getAllRecipes } from 'app/services/recipe-service';
+import { getAllTags } from 'app/services/recipe-service';
 
 
 const Home: React.FC = () => {
-    const allRecipes = getAllRecipes();
+    const allTags = getAllTags();
 
     return (
         <div className="app-page">
-            <h1>Recipes</h1>
+            <h1>Categories</h1>
             {
-                allRecipes.map((recipe) => {
+                allTags.map((tag) => {
                     return <Link
                         className="recipe-link"
-                        key={recipe.name}
-                        to={`/recipe/${recipe.name}`}
+                        key={tag}
+                        to={`/recipes/${tag}`}
                     >
-                        {recipe.name}
+                        {tag}
                     </Link>;
                 })
             }
