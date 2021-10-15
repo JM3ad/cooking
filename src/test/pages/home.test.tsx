@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Home from 'app/pages/home';
-import { getAllRecipes } from 'app/services/recipe-service';
+import { RecipeTags } from 'app/models/recipeTag';
 
 describe('Home Page', () => {
     const getHomePage = () => {
@@ -13,25 +13,22 @@ describe('Home Page', () => {
 
     test('renders title', () => {
         render(getHomePage());
-        expect(screen.queryByText("Recipes")).toBeInTheDocument();
+        expect(screen.queryByText("Categories")).toBeInTheDocument();
     });
 
     // This test only checks up to 3 recipes
     // to avoid caring about any recipes that aren't yet on screen
-    test('renders at least first three recipes', () => {
+    test('renders option for all recipes', () => {
         render(getHomePage());
-        getAllRecipes().slice(0, 3).forEach((recipe) => {
-            expect(screen.queryByText(recipe.name)).toBeInTheDocument();
-        });
+        expect(screen.queryByText("All")).toBeInTheDocument();
     });
 
-    test('clicking on a recipe opens that recipes page', async () => {
+    test('clicking on a category opens that category page', async () => {
         render(getHomePage());
-        if (getAllRecipes().length === 0) return;
-        const firstRecipe = getAllRecipes()[0];
-        const button = screen.getByText(firstRecipe.name);
+        const categoryName = RecipeTags[0];
+        const button = screen.getByText(categoryName);
         button.click();
-        const urlEncoded = encodeURI(`/recipe/${firstRecipe.name}`);
+        const urlEncoded = encodeURI(`/recipes/${categoryName}`);
         expect(window.location.pathname).toEqual(urlEncoded);
     });
 });
