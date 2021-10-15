@@ -1,4 +1,2 @@
-export enum RecipeTag {
-    MAIN = "Main",
-    BREAKFAST = "Breakfast"
-}
+export const RecipeTags = ["Main", "Breakfast"] as const;
+export type RecipeTag = typeof RecipeTags[number];

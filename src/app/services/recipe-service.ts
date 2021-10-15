@@ -1,11 +1,11 @@
 import { allRecipes } from "app/data/recipes";
 import { Recipe } from "app/models/recipe";
-import { RecipeTag } from "app/models/recipeTag";
+import { RecipeTag, RecipeTags } from "app/models/recipeTag";
 
 const TAG_ALL_RECIPES = "All";
 
 export const getAllTags = (): string[] => {
-    const tags = Object.values(RecipeTag).map((tag) => <string> tag);
+    const tags: string[] = [...RecipeTags];
     tags.unshift(TAG_ALL_RECIPES);
     return tags;
 };
@@ -15,8 +15,7 @@ export const getRecipes = (tag: string): Recipe[] => {
         return getAllRecipes();
     }
     return getAllRecipes().filter((recipe) => {
-        console.log(tag);
-        const recipeTag = <RecipeTag><unknown> tag;
+        const recipeTag = tag as RecipeTag;
         return recipe.tags && recipe.tags.includes(recipeTag);
     })
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Home from 'app/pages/home';
-import { RecipeTag } from 'app/models/recipeTag';
+import { RecipeTags } from 'app/models/recipeTag';
 
 describe('Home Page', () => {
     const getHomePage = () => {
@@ -25,7 +25,7 @@ describe('Home Page', () => {
 
     test('clicking on a category opens that category page', async () => {
         render(getHomePage());
-        const categoryName = RecipeTag.MAIN.valueOf();
+        const categoryName = RecipeTags[0];
         const button = screen.getByText(categoryName);
         button.click();
         const urlEncoded = encodeURI(`/recipes/${categoryName}`);
