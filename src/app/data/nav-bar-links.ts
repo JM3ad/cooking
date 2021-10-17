@@ -12,7 +12,8 @@ export const NavBarLinks: NavBarLink[] = [
     {
         pageRoute: '/recipe-generator',
         icon: editIcon,
-        altText: 'Edit icon'
+        altText: 'Edit icon',
+        devOnly: true,
     },
     {
         pageRoute: '/useful-charts',
