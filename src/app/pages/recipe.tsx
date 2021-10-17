@@ -2,6 +2,7 @@ import { Recipe } from 'app/models/recipe';
 import React from 'react';
 import 'app/pages/Recipes.scss';
 import { Link } from 'react-router-dom';
+import { isDevEnvironment } from 'app/services/environment-service';
 
 type RecipeProps = {
     recipe: Recipe;
@@ -49,7 +50,7 @@ const MethodDisplay: React.FC<MethodProps> = (props: {method?: string[]}) => {
 
 const RecipeDisplay: React.FC<RecipeProps> = (props: RecipeProps) => {
     const recipe = props.recipe;
-    const shouldShowEdit = process.env.REACT_APP_ENVIRONMENT === 'dev';
+    const shouldShowEdit = isDevEnvironment();
 
     return (
         <div className="app-page">
