@@ -34,8 +34,8 @@ const App: React.FC = () => {
                     if (!recipes) {
                         return <PageNotFound />;
                     }
-
-                    return <RecipeList recipes={recipes}/>}
+                    const sortedRecipes = recipes.sort((a, b) => a.name.localeCompare(b.name));
+                    return <RecipeList recipes={sortedRecipes}/>}
                 } />
                 <Route path="/recipe/:recipeId" render={(props)=>{
                     const recipe = getRecipe(props.match.params.recipeId);
