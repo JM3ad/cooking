@@ -65,7 +65,13 @@ const RecipeDisplay: React.FC<RecipeProps> = (props: RecipeProps) => {
                     </Link>
                     : null
                 }
-                <a href={recipe.url} className="recessive-link">Click for original recipe</a>
+                {
+                    
+                    /* eslint-disable max-len */
+                    recipe.url ?
+                        <a href={recipe.url} className="recessive-link">Click for original recipe</a>
+                        : null
+                }
                 <IngredientsDisplay ingredients={recipe.ingredients} />
                 <MethodDisplay method={recipe.method} />
             </div>
